@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0.782vw;
+}
+.mainHeader {
+    background-image: url(../assets/images/pexels-stanislav-kondratiev-2908984.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+.mainHeader1 {
+    font-size: 10rem;
+    
+    font-weight: bold;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f0f0f0;
+}
+.mainSpan{
+    font-size: 6rem;
+   
+    color: rgb(255, 0, 0);
+}
+.catalog {
+  
+
+ display: flex; 
+ flex-wrap: wrap;
+}
+.headerCatalog {
+    text-align: center;
+    padding: 2%;
+    text-transform: capitalize;
+    
+    width: 100%;
+    font-size: 5rem;
+
+}
+.item {
+    width: 30vw;
+    max-height: 100%;
+    padding: 2%;
+    margin: 1%;
+    background-image: url(../assets/images/books/frame3.jfif);
+    background-size: 130%;
+    background-position: 32% 8%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+.imgWrapper {
+    width: 50%;
+    position: relative;
+    border: 2px solid rgba(73, 72, 72, 0.5);
+    box-shadow: 13px 0px 32px;
+    transition: all 1.5s;
+    
+}
+.imgWrapper img {
+    max-width: 100%;
+}
+.textWrapper {
+    width: 48%;
+    padding-right: 5%;
+    
+}
+.description {
+    font-size: 1.5rem;
+    
+    color: rgba(32, 31, 31, 0.65);
+}
+.author {
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba(32, 31, 31, 0.65);
+}
+.bookName {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    color: rgba(32, 31, 31, 0.65);
+}
+.price {
+    font-size: 1.32rem;
+    margin-bottom: 5rem;
+    font-weight: bold;
+    color: rgba(32, 31, 31, 0.65);
+}
+.btnWrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.btnWrapper a {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(32, 31, 31, 0.65);
+
+}
+.modal {
+    transform: translateX(-30000%);
+    background-color: lightgray;
+    width: 25vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid rgba(73, 72, 72, 0.5);
+    box-shadow: 13px 0px 32px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.closeModalBtn {
+    color: rgba(195, 31, 31, 0.65);
+   font-size: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.bag {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.insideBag {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.headerBag {
+    text-align: center;
+    padding: 2%;
+    text-transform: capitalize;
+    
+    width: 100%;
+    font-size: 5rem;
+}
+.priecetag {
+    font-size: 6rem;
+    color: rgb(250, 112, 112);
+    text-align: center;
+}
+.ByuBtn {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 7rem;
+    color: rgb(183, 79, 79);
+}
