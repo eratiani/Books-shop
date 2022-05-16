@@ -1,1 +1,1 @@
-https://eratiani.github.io/Books-shop/indextest.html
+https://eratiani.github.io/Books-shop/index.html
