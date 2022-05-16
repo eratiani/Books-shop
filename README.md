@@ -1,1 +1,1 @@
-eratiani.github.io/books-shop/forjs.html
+eratiani.github.io/books-shop/indextest.html
