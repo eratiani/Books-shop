@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/form.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <h1 class="header1">Purchase Form</h1>
+        <form class="form"  >
+            <div class="person ">
+                <div class="fnamewrap">
+
+                    <label for="fName">First Name</label>
+                    <input id="fName" class="fName1 required" type="text" name="fName" >
+                    <div class="error"> Invalid Input</div>
+                </div>
+                <div class="lNameWrap">
+
+                    <label for="lName">Last Name</label>
+                    <input id="lName" class="lName1 required" type="text" >
+                    <div class="error"> Invalid Input</div>
+                </div>
+            </div>
+            <div class="delivery">
+                <label for="dDate ">Delivery Date</label>
+                <input class="required" id="dDate" type="date" >
+                <div class="error"> not later than three month</div>
+                <label for="street">Street</label>
+                <input class="required" id="street" type="text" >
+                <div class="error"> Invalid Input</div>
+                <label for="hNumber">House Number</label>
+                <input class="required" id="hNumber" type="number" >
+                <div class="error"> Invalid Input</div>
+                <label for="fNumber">Flat Number</label>
+                <input class="required" id="fNumber" type="number" onkeydown="return event.keyCode !== 69">
+                <div class="error">Invalid Input</div>
+            </div>
+            <div class="radioBtn ">
+                <h2>Payment Method</h2>
+                <div class="radioBtns">
+
+                    <input class="cash" type="radio" id="cash" name="fav_language" value="HTML" >
+                    <label for="cash">CASH</label>
+                    <input class="card" type="radio" id="card" name="fav_language" value="CSS" >
+                    <label for="card">Card</label>
+                    
+                </div>
+
+            </div>
+            <div class="gift">
+                <h2>Choose 2 Gifts</h2>
+            </div>
+            <div class="checkbox1">
+                <div class="item1">
+                    <input type="checkbox" id="gift" name="check" value="pack as a gift,">
+                    <label for="gift"> Pack As A Gift</label>
+
+                </div>
+                <div class="item1">
+                    <input type="checkbox" id="postCard" name="check" value="Car">
+                    <label for="postCard"> Add Postcard
+                    </label>
+                </div>
+                <div class="item1">
+                    <input type="checkbox" id="discount" name="check" value="Boat">
+                    <label for="discount"> Provide 2% Discount For The Next Time</label>
+                </div>
+
+                <div class="item1">
+                    <input type="checkbox" id="pP" name="check" value="Boat">
+                    <label for="pP"> Branded Pen Or Pencil</label>
+                </div>
+                <div class="error">Invalid Input</div>
+
+
+
+            </div>
+            <div class="btnWrapper">
+
+                <input class="btnLast"  value="Complete" type="button"  disabled>
+            </div>
+        </form>
+        <h2 class="result"></h2>
+    </div>
+    
+<script src="js/form.js"></script>
+</body>
+
+</html>
