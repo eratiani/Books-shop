@@ -106,7 +106,7 @@ street.addEventListener("focusout", function() {
 hNumber.addEventListener("focusout", function() {
     let hNumberCheck = ()=>{
         let matchPattern = hNumber.value.match(/\d+/g);
-        if(matchPattern === null && hNumber.value <=0 ) {
+        if(matchPattern === null || hNumber.value < 1 ) {
             hNumber.classList.add("invalid")
             error[4].style.opacity = "100"
             return false
