@@ -128,7 +128,7 @@ fNumber.addEventListener("focusout", function() {
         firstDash = fNumber.value.match(firstDash)
         
         
-        if(firstDash !== null ) {
+        if(firstDash !== null || fNumber.value.length < 1) {
             fNumber.classList.add("invalid")
             error[5].style.opacity = "100"
             return false
