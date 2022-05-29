@@ -250,6 +250,7 @@ function addElements() {
         newDiv2.append(newDiv4);
         const Img1 =  new Img('img', "").createElem()
         Img1.src="./assets/images/books/book"+count+".jpg"
+        Img1.style.pointerEvents = "none"
         newDiv3.append(Img1)
         const modalDiv = new Div('modal', "").createElem()
         newDiv3.append(modalDiv)
