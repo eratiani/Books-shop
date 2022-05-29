@@ -89,6 +89,7 @@ class Div {
       return div
     }
   }
+  let price =0;
   class H1 {
     constructor(classN, text) {
       this.class = classN
@@ -191,6 +192,36 @@ function addElements() {
     const header22 = new H1('headerBag', "Your Shopping Bag").createElem()
         bagDiv.append(header22) 
         const header22Div = new Div('insideBag', "").createElem()
+        header22Div.style.minHeight = "500px"
+        header22Div.addEventListener("dragover", (event)=>{
+          event.preventDefault();
+        });
+        header22Div.addEventListener("drop", (event)=>{
+          let arr = document.querySelectorAll(".addToBag")
+          console.log(arr);
+          const id = event
+          
+    .dataTransfer
+    .getData('text');
+    const draggableElement = document.getElementById(id);
+    const dropzone = event.target;
+    console.log(count);
+  
+    arr.forEach((el)=>{
+      if(el.parentElement.parentElement.parentElement.parentElement.id ===id ) {
+        console.log(el.parentElement.parentElement.childNodes[3]);
+        el.innerHTML = "remove"
+        let bprice = el.parentElement.parentElement.childNodes[3].innerText
+         price +=  parseInt(bprice)
+        priceTag.innerText=price;
+      }
+    })
+
+    dropzone.appendChild(draggableElement);
+    event
+    .dataTransfer
+    .clearData();
+        });
         bagDiv.append(header22Div) 
         let price = 0;
         const buyBtn = new A('ByuBtn', "Buy Now!!!").createElem()
@@ -202,7 +233,17 @@ function addElements() {
     authors.forEach((Element)=>{
         count++;
         const newDiv2 = new Div('item', "").createElem();
+        newDiv2.draggable = "true";
+        newDiv2.setAttribute('id', `id${count}`) 
         newDiv1.append(newDiv2);
+        newDiv2.addEventListener("dragstart", (event)=>{
+          console.log(event.target.id);
+          event
+          .dataTransfer
+          .setData('text/plain', event.target.id);
+          
+        
+        })
         const newDiv3 = new Div('imgWrapper', "").createElem()
         newDiv2.append(newDiv3);
         const newDiv4 = new Div('textWrapper', "").createElem()
