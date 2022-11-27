@@ -119,15 +119,15 @@ hNumber.addEventListener("focusout", function() {
     }
     hNumberCheck()
 })
-fNumber.addEventListener("focusout", function() {
-    let fNumberCheck = ()=>{
+fNumber.addEventListener("input", function() {
+    let fNumberCheck = () => {
         let firstDash = /^-/;
-        // let matchPattern = /^[0-9.-]+$/gi;
+        let matchPattern = /^[0-9.-]+$/gi;
         // let firstDash = /(^[1-9]{1,})(\w*)/g;
         // matchPattern = fNumber.value.match(matchPattern)
         firstDash = fNumber.value.match(firstDash)
-        
-        if (firstDash !== null ) {
+        matchPattern = fNumber.value.match(matchPattern)
+        if (firstDash !== null || fNumber.value.match(matchPattern)===null) {
            
             fNumber.classList.add("invalid")
             error[5].style.opacity = "100"
