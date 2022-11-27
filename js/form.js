@@ -121,14 +121,14 @@ hNumber.addEventListener("focusout", function() {
 })
 fNumber.addEventListener("focusout", function() {
     let fNumberCheck = ()=>{
-        let firstDash = /^\-/gm;
-        let matchPattern = /e/gi;
+        let firstDash = /^-/;
+        // let matchPattern = /^[0-9.-]+$/gi;
         // let firstDash = /(^[1-9]{1,})(\w*)/g;
-        matchPattern = fNumber.value.match(matchPattern)
+        // matchPattern = fNumber.value.match(matchPattern)
         firstDash = fNumber.value.match(firstDash)
         
-        
-        if(firstDash !== null || fNumber.value.length < 1) {
+        if (firstDash !== null ) {
+           
             fNumber.classList.add("invalid")
             error[5].style.opacity = "100"
             return false
@@ -337,7 +337,7 @@ function validation() {
     let checkBoxCheck = ()=> {
         let checkboxes = document.querySelectorAll('input[name="check"]:checked')
         let cBArr = Array.from(checkboxes);
-        
+        console.log(cBArr);
         if(cBArr.length===2){
             checkbox.classList.remove("invalid")
             error[6].style.opacity = "0"
